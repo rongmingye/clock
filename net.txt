@@ -1,0 +1,70 @@
+node net模块
+	net.server : 内部有socket
+	net.socket : 客户端可创建的socket
+
+	socket.write(); 发送数据
+	socket.end(); 关闭连接， 若有数据，则先发数据再关闭连接
+
+	socket.on('data', function(){ }); 接收到数据触发
+	socket.on('connect', function(){ }); 连接时触发
+
+	socket.address(); 当前socket的地址
+	socket.remoteAddress(); 远程socket的ip地址
+
+	socket.pause(); 暂停读取数据。就是说，不会再触发 data 事件。对于控制上传非常有用。
+	socket.resume(); 调用 pause() 后想恢复读取数据。
+
+
+创建一个net服务
+	var net = require('net');
+	var connection = require('./mysql.js');
+
+	var HOST = '192.168.123.65'; //服务器的ip和端口
+	var PORT = 6969;
+
+	var server = net.createServer(function(sock) {
+	    // 我们获得一个连接 - 该连接自动关联一个socket对象
+	    console.log('CONNECTED: ' + sock.remoteAddress + ':' + sock.remotePort);
+
+	    if(sock.remoteAddress == "192.168.123.63"){
+	        chipSocket = sock;
+	    }
+
+	    // 服务器收到客户端数据时触发
+	    sock.on('data', function(data){
+	        
+	    });
+
+	    // 服务器关闭时触发
+	    sock.on('close', function(data) {
+	        console.log('CLOSED: ' + sock.remoteAddress + ' ' + sock.remotePort);
+	    });
+
+	});
+
+	server.listen(PORT, HOST);
+
+创建一个客户端socket
+		var net = require('net');
+		var HOST = '192.168.123.65'; // 要连接的服务器ip端口
+		var PORT = 6969; 
+	   
+		var socket = new net.Socket();
+		socket.connect(PORT, HOST, function() {
+		    console.log('CONNECTED TO: ' + HOST + ':' + PORT);
+			socket.write(odata);
+		});
+
+		// 返回的数据
+		socket.on('data', function(data) {
+			console.log(data);
+			socket.end(); // 关闭连接
+		});
+
+		// 为客户端添加“close”事件处理函数
+		socket.on('close', function() {
+		    console.log('Connection closed');
+		});
+
+电脑服务访问
+	同一个局域网, 服务器的ip要改成局域网分配的ip, 这样别的电脑才可以访问我的电脑

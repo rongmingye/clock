@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/content.css" />
+</head>
+<body>
+	<div class="container">
+
+		<!-- 头部 -->
+		<div class="head">
+			<h3>智能门锁管理系统</h3>
+			<span id="open-door">开门</span>
+		</div> <!-- head结束 -->
+
+		<!-- 主内容 -->
+		<div class="main clearfix">
+			<div class="side f-left">
+				<div class="title">功能模块:</div>
+				<ul>
+					<li><a href="record.html">最近开门</a></li>
+					<li><a href="user.html">所有用户</a></li>
+					<li><a href="addUser.html">添加用户</a></li>
+					<li><a href="iap.html" class="liActive">iap</a></li>
+				</ul>
+			</div> <!-- side结束 -->
+
+			<div class="content f-right">
+				 <p> 烧录.bin文件 </p>
+				 <p> <button id="start"> 开始 </button></p>
+			</div> <!-- content结束 -->
+		</div> <!-- main结束 -->
+
+		<!-- 脚部 -->
+		<div class="foot">
+			<p>design by 1572</p>
+		</div>
+
+	</div> <!-- container结束 -->
+	<script src="js/iap.js"></script>
+</body>
+</html>

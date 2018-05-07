@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加用户</title>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/content.css" />
+	<link rel="stylesheet" href="css/addUser.css" />
+</head>
+<body>
+	<div class="container">
+
+		<!-- 头部 -->
+		<div class="head">
+			<h3>智能门锁管理系统</h3>
+		</div> <!-- head结束 -->
+
+		<!-- 主内容 -->
+		<div class="main clearfix">
+			<div class="side f-left">
+				<div class="title">功能模块:</div>
+				<ul>
+					<li><a href="record.html">最近开门</a></li>
+					<li><a href="user.html" >所有用户</a></li>
+					<li><a href="addUser.html" class="liActive">添加用户</a></li>
+				</ul>
+			</div> <!-- side结束 -->
+
+			<!-- 主内容 -->
+			<div class="content f-right">
+
+				<div class="content-title">添加用户:</div>
+				<div class="content-article">
+					<p id="text">
+						<span>请输入名字：</span>
+						<input type="text" id="userName">
+						<input type="button" value="提交" id="addName" class="btn">
+					</p>
+				</div>
+				
+			</div> <!-- content结束 -->
+		</div>
+
+		<!-- 脚部 -->
+		<div class="foot">
+			<p>design by 1572</p>
+		</div>
+
+	</div> <!-- container -->
+	
+	<script src="js/addUser.js"></script>
+</body>
+</html>

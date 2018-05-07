@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>开门记录</title>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/content.css" />
+</head>
+<body>
+	<div class="container">
+
+		<!-- 头部 -->
+		<div class="head">
+			<span id="curtime"></span>
+			<h3>智能门锁管理系统</h3>
+			<span id="open-door">开门</span>
+		</div> <!-- head结束 -->
+
+		<!-- 主内容 -->
+		<div class="main clearfix">
+			<div class="side f-left">
+				<div class="title">功能模块:</div>
+				<ul>
+					<li><a href="record.html" class="liActive">最近开门</a></li>
+					<li><a href="user.html">所有用户</a></li>
+					<li><a href="addUser.html">添加用户</a></li>
+					<!-- <li><a href="iap.html">iap</a></li> -->
+				</ul>
+			</div> <!-- side结束 -->
+
+			<!-- 主内容 -->
+			<div class="content f-right">
+
+				<div class="content-title">最近开门:</div>
+				<div class="content-article">
+					<!-- 标题 -->
+					<div class="article-title">
+							<span class="user-id">序号</span>
+							<span class="user-name">姓名</span>
+							<span class="user-time">时间</span>
+					</div>
+
+					<!-- 展现数据库record记录 -->
+					<ul class="article-box" id="article-box">
+						<!-- <li>
+							<span class="user-id">1</span>
+							<span class="user-name">rmy</span>
+							<span class="user-time">2018-3-19 15:00:00</span>
+						</li> -->
+					</ul>
+				</div>
+
+			</div> <!-- content结束 -->
+		</div> <!-- main结束 -->
+
+		<!-- 脚部 -->
+		<div class="foot">
+			<p>design by 1572</p>
+		</div>
+
+	</div> <!-- container结束 -->
+	<script src="js/open.js"></script>
+	<script src="js/record.js"></script>
+</body>
+</html>

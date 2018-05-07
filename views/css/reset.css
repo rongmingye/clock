@@ -1,0 +1,27 @@
+*{
+	padding:0; 
+	margin:0; 
+	box-sizing: border-box; 
+}
+html, body{
+	width: 100%;
+	height: 100%;
+}
+.f-left{ float: left; }
+.f-right{ float: right; }
+.clearfix{ zoom: 1; }
+.clearfix:after{
+	display: block;
+	clear: both;
+	content: "";
+	height: 0;
+}
+ul,li{ list-style: none; }
+a{ text-decoration: none; color: #000; }
+
+.container{
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+}
+

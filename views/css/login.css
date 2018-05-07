@@ -1,0 +1,61 @@
+*{
+  	padding: 0;
+  	margin:0;
+  	box-sizing: border-sizing;
+}
+html, body{  width: 100%; height: 100%; }
+body{
+    font-size: 14px;
+    background: url(../img/bg.jpg) no-repeat center center;
+    background-size:  100% 100%;
+    background-position: 100%, 100%;
+}
+
+.login{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+
+	width: 400px;
+	height: 220px;
+	margin: -200px 0 0 -200px;
+	border: 1px solid #f90;
+	border-radius: 10px;
+}
+.login h3{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+
+	font-size: 16px;
+	background-color: #f90;
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 20px;
+}
+.login p{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 10px;
+	font-size: 16px;
+}
+.login p span{
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+	margin-right: 10px;
+}
+.login #username, .login #password{
+	padding: 4px;
+	border-radius: 5px;
+	border: 0;
+}
+#loginBtn{
+	display: inline-block;
+	padding: 5px 30px;
+	border-radius: 10px;
+	border: 0;
+	background: #5cb85c;
+	color: #fff;
+}

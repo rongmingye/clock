@@ -1,0 +1,135 @@
+/* 头部 .head */
+.head{
+	position: relative;
+	width: 100%;
+	height: 15%;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 10px;
+	color: #fff;
+
+	background: linear-gradient( to top right, #050132, #6b3555) ;
+}
+.head h3{
+	height: 100%;
+	padding-top: 10px;
+	font-size: 28px;
+	letter-spacing: 5px;
+}
+.head #curtime{
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+.head #open-door{
+	position: absolute;
+	right: 50px;
+	bottom: 20px;
+
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 10px;
+
+	cursor: pointer;
+	color: 	#fff;
+	font-weight: bolder;
+	background: #5cb85c;
+}
+
+/* 主内容main */
+.main{ 
+	width: 100%;
+	height: 75%;
+	margin: 1% 0;
+}
+/* 主内容的侧边模块 .side */
+.main .side{
+	width: 20%;
+	height: 100%;
+	
+	border: 1px solid #999;
+	background: #4c5e70;
+	color: #fff;
+	overflow: auto;
+}
+.side .title{
+	font-weight: bold;
+	padding: 10px;
+}
+.side ul{
+}
+.side ul li{
+}
+
+.side li a{
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px 0 20px;
+	color: #aaa;
+}
+.side li a.liActive{
+	color: #fff;
+	background: #3d4f60;
+}
+
+/* 主内容的内容模块 .content */
+.main .content{
+	width: 78%;
+	height: 100%;
+	padding: 10px;
+	border: 1px solid #999;
+	background-color: #eee;
+
+	overflow: auto;
+}
+.content-title{
+	font-weight: bold;
+}
+.content span{ 
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.content .user-id{
+	width: 100px;
+}
+.content .user-name{
+	width: 100px;
+}
+.content .user-time{
+	width: 300px;
+}
+.content #user-del{
+	width: 100px;
+	cursor: pointer;
+
+	font-weight: bold;
+}
+.content .user-del{
+	display: none;
+	width: 100px;
+	color: #f00;
+	cursor: pointer;
+}
+
+/* 脚部 .foot */
+.foot{ 
+	position: relative;
+	width: 100%;
+	height: 40px;
+	border: 1px solid #999;
+	background: linear-gradient( to left, #0700f3, #00BFFF);
+	color: #fff;
+	border-radius: 10px;
+	text-align: center;
+}
+.foot p{  
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}

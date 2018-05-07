@@ -1,0 +1,108 @@
+版本clock2.0
+	状态：关闭了httpSocket
+
+skill
+	jquery express socket mysql
+	
+server
+	httpServer 局域网分配的ip: ip: 192.168.123.65 port: 6868
+	netServer 局域网分配的ip: ip: 192.168.123.65 port: 6969 
+	mysql 局域网分配ip: ip: 192.168.123.65 port: 3306 
+
+mysql
+	表： user: 用户信息
+			结构： id user password
+		 record：记录来开门的人和时间
+		 	结构：id user time
+
+前端模块
+	登陆模块：登陆到管理系统的模块
+	开门模块：点击开门
+	
+	最近开门模块：展示最近开门的人的名字和时间，最新在前
+	所用用户模块：展示所有用户
+	添加用户模块：	1 网页点击添加用户，请求到http服务器, 添加用户到mysql, net的数据状态变为addUser
+					2 单片机发密码到net, net 更新该用户的密码
+					3 确认键按下， 查看是否更新了密码， 若不是1111，则添加成功， 否则在删除该用户
+	
+node结构模块
+	npm init
+	npm install express
+	npm install mysql
+	npm install net
+
+http服务器  httpServer: ip: 192.168.123.65 端口 6868 
+	前端和后端交互处理数据库
+	后端调用新socket然后与net服务器连接
+
+	最近开门 record_post
+	查询用户 user_post
+	添加用户 addUser_post
+	确定添加该用户 newUserQuery_post: 添加了指纹密码后点击
+	开门 open_post
+
+net服务器   netServer: ip: 192.168.123.65 端口 6969 
+	socekt处理器
+	net服务器处理socket
+	新socket通过ip和端口连到net
+	多socket连接时，可以通过sock.remoteAddress()的ip保存指定socket到一个变量
+
+	网页和net连接：httpSocket
+		网页发送:	open
+					addUser
+
+	单片机和net连接：chipSocket
+		单片机发送：k + 密码  查询开门
+					x + 密码  添加密码到新用户
+
+添加用户 ，一个用户有三个id
+
+	
+	1 输入用户名，发送"emode" 进入录指纹模式，
+
+	2 发送"getidnum" 获取指纹 "id1" 号， 获取该用户的id1成功 "newa123"
+
+	3 发送"enroll"  指纹模块注册 录入指纹
+		成功返回ok: 保存用户名和id1    "enrolla123"
+		失败返回false
+
+	2 发送"getidnum" 获取指纹 "id1" 号， 获取该用户的id1成功 "newa123"
+
+	3 发送"enroll"  指纹模块注册 录入指纹
+		成功返回ok: 保存用户名和id1    "enrolla123"
+		失败返回false
+
+	2 发送"getidnum" 获取指纹 "id1" 号， 获取该用户的id1成功 "newa123"
+
+	3 发送"enroll"  指纹模块注册 录入指纹
+		成功返回ok: 保存用户名和id1    "enrolla123"
+		失败返回false
+
+	4 imode 退出录指纹模式，进入指纹识别模式
+
+
+记录最近开门的id
+	1  单片机返回"recorda123"，进入记录模式 a是分隔符
+
+开门
+	发"opendoor"，
+
+加密
+	网络iap
+		1 发送 "iap"， 单片机进入接收烧录文件模式
+		2 发送.bin文件
+		3 发送"loadapp"
+
+	启动net服务器
+		有两种选择发送
+			1 "loadapp": 
+			2 不发
+
+
+删除用户
+	比如删除1号 你就发deletea001
+	        10   deletea010
+
+
+
+

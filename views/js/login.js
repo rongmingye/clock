@@ -15,7 +15,7 @@ $(function(){
 
 					if(result==="success"){
 						$.cookie( username, pwd, {expires: 1, path: '/'} ); // 设置cookie
-						window.location.href="record.html"; //调到record.html
+						window.location.href="/record.html"; //调到record.html
 					}else if(result==="fail"){
 						alert("密码错误");
 					}

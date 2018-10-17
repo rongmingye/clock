@@ -4,7 +4,7 @@ $(function(){
 	if( $.cookie("f111") ){
 		console.log("has cookie username");
 	}else{
-		window.location.href = "http://192.168.123.163:6868/login.html"
+		window.location.href = window.Site+"/login.html"
 	}
 
 	$("#start").click(function(){

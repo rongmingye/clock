@@ -4,7 +4,7 @@ $(function(){
 	if( $.cookie("f111") ){
 		console.log("has cookie username");
 	}else{
-		window.location.href = "/login.html"
+		window.location.href = window.Site+"/login.html"
 	}
 
 	var flag = 1;  // 注册三次id
@@ -23,7 +23,7 @@ $(function(){
 				dataType: "text",
 				success: function(result){
 					// 成功后， 获取id
-					$("#text").html("<p><input type='button' id='getidnum' value='获取id' class='btn' /></p>");
+					$("#text").html( "<p><input type='button' id='getidnum' value='获取id' class='btn' /></p>" );
 					getIdNum();
 				},
 				fail: function(err, status){
@@ -71,8 +71,8 @@ $(function(){
 				success: function(result){
 					if(result === "enrollSuccess"){
 						if(flag<3){
-							$("#text").html("<p><input type='button' id='getidnum' value='再次获取id' class='btn'/></p>");
 							flag++;
+							$("#text").html("<p><input type='button' id='getidnum' value='再次获取id' class='btn'/></p>");
 							getIdNum();
 
 						}else if(flag = 3){
@@ -99,7 +99,7 @@ $(function(){
 				dataType: "text",
 				success: function(result){
 					if(result==="completedSuccess"){
-						window.location.href= "http://192.168.123.163:6868/addUser.html";
+						window.location.href= window.Site+"/addUser.html";
 					}
 				},
 				fail: function(err, status){

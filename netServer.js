@@ -1,6 +1,6 @@
 // 服务器端
 var net = require('net');
-var query = require('./mysql.js');
+var query = require('./serve/mysql.js');
 var fs = require("fs");
 
 var HOST = '192.168.123.163'; //net服务器的ip和端口
